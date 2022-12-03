@@ -1,0 +1,1 @@
+# assignement-url-minimizer
