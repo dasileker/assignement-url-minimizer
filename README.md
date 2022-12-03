@@ -27,8 +27,8 @@
 
 - The app is not having metrics due to the unique id for each url generated, so I could'nt find a way to track the metrics for each url.
 
-### Author
+### Author { Zerradi Amine }
 
-- [github](www.github.com/dasileker)
-- [twitter](www.twitter.com/dasileker)  
-- [linkedin](www.linkedin.com/in/amine-zerradi)
+- [Github](https://github.com/dasileker)
+- [linkedin](https://www.linkedin.com/in/amine-zerradi)
+
