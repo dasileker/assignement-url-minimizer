@@ -17,6 +17,8 @@ gem "puma", "~> 5.0"
 
 gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
+gem 'materialize-sass'
+
 gem 'webpacker'
 
 gem 'sass-rails'
