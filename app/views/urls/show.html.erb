@@ -1,15 +1,15 @@
 <html>
   <center>
-    <div class="container-fluid">
-      <h1>Copy The Minimized Url</h1>
+    <div class="container">
+      <h1 class="title">Copy The Minimized Url</h1>
       <p>Minimized Url: 
       <strong><%= @url.short_url %></strong>
       </p>
 
-      <p>Please copy paste the short url</p>
+      <p class="description">Please copy paste the short url</p>
       
 
-      <button type="sbmit"><%= link_to 'Home', root_path, class: "mt-5" %></button>
+      <button class="btn" type="sbmit"><%= link_to 'Home', root_path, class: "" %></button>
       
     </div>
 
