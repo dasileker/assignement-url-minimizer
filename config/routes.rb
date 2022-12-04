@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   post '/urls', to: 'urls#create', as: 'urls'
   get '/urls/:id', to: 'urls#show', as: 'url'
 
-  get '/:shortcode', to: 'urls#redirect_to_url', as: 'redirect'
+  get '/metrics', to: 'urls#redirect_to_url', as: 'redirect'
+
+  get '/metrics/stat', to: 'analitics#show', as: 'stat' # Done
 
 end

@@ -11,7 +11,7 @@ class UrlsController < ApplicationController
 
     return if @url.nil?
 
-    create_or_update_analytics(@url.id)
+    create_or_update_analytics(@ip, @url.id)
     redirect_to(@url.long_url, allow_other_host: true)
   end
 
@@ -34,10 +34,10 @@ class UrlsController < ApplicationController
 
   private
 
-  def create_or_update_analytics(url_id)
+  def create_or_update_analytics(ip, url_id)
     analytic = Analitic.find_by(url_id: url_id)
     if analytic.nil?
-      Analitic.create( click_count: 1, last_visit: Time.zone.now, url_id: url_id)
+      Analitic.create(ip: ip, click_count: 1, last_visit: Time.zone.now, url_id: url_id)
     else
       count = analytic.click_count.to_i + 1
       analytic.update(click_count: count, last_visit: Time.zone.now)

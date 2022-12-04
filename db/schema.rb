@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_03_154217) do
   enable_extension "plpgsql"
 
   create_table "analitics", force: :cascade do |t|
+    t.string "ip"
     t.string "click_count"
     t.datetime "last_visit"
     t.bigint "url_id", null: false

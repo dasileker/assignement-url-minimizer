@@ -5,31 +5,41 @@
       <div class="top-stat">
       <p>
       <strong>Total visits: </strong>
-      <%= @total_click_count %>
+      <%= @total_click_count.size %>
       </p>
       <p>
       <strong>Total Unique visits: </strong>
-      <%= @total_unique_visitors %>
+      <%= @total_unique_visitors.size %>
       </p>
     </div>
 
 
     <table class="table">
-        <tbody>
-          <% @visitors.each_with_index do |visitor, index| %>
-            <tr>
-              <td scope="row"><%= index + 1 %></td>
-              <td><%= visitor.click_count %></td>
-              <td><%= visitor.last_visit %></td>
-              <td><%= visitor.url.short_url %></td>
-              <td><%= visitor.url.long_url %></td>
-              <td></td>
-            </tr>
-          <%end%>
-        </tbody>
+      <thead>
+        <tr>
+          <th>S/No</th>
+          <th>IP address</th>
+          <th>Click count</th>
+          <th>Last visit</th>
+          <th>Short Url</th>
+          <th>Original Url</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @visitors.each_with_index do |visitor, index| %>
+          <tr>
+            <td><%= visitor.ip %></td>
+            <td><%= visitor.click_count %></td>
+            <td><%= visitor.last_visit %></td>
+            <td><%= visitor.short_url %></td>
+            <td><%= visitor.long_url %></td>
+            <td></td>
+          </tr>
+        <%end%>
+      </tbody>
     </table>
 
-    <%= link_to 'Home', root_path %>
+    <button class="btn" type="sbmit"><%= link_to 'Home', root_path, class: "link" %></button>
 
     </div>
 

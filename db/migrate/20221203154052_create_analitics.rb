@@ -1,6 +1,7 @@
 class CreateAnalitics < ActiveRecord::Migration[7.0]
   def change
     create_table :analitics do |t|
+      t.string :ip
       t.string :click_count
       t.datetime :last_visit
       t.references :url, null: false, foreign_key: true
