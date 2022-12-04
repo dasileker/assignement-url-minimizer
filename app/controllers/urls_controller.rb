@@ -44,7 +44,7 @@ class UrlsController < ApplicationController
     end
   end
 
-  # Only allow a list of trusted parameters through.
+  
   def url_params
     params.require(:url).permit(:long_url)
   end

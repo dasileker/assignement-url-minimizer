@@ -11,6 +11,7 @@
 ### This app is built using
 
 - Rails latest version 7.0.0
+- Stimulusjs
 - Ruby latest version 3.1.2
 - Postgresql
 
@@ -25,10 +26,9 @@
 
 ### Note
 
-- The app is not having metrics due to the unique id for each url generated, so I could'nt find a way to track the metrics for each url.
+- in orther to get to the metric page please go to `http://localhost:3000/metrics/stat` and you will be able to see the metrics of the app.
 
 ### Author { Zerradi Amine }
 
 - [Github](https://github.com/dasileker)
 - [linkedin](https://www.linkedin.com/in/amine-zerradi)
-

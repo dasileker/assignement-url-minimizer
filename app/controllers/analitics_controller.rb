@@ -6,7 +6,6 @@ class AnaliticsController < ApplicationController
     @total_unique_visitors = Analitic.where(url_id: params[:id]).count
   end
   
-  #display all the visitors
   def index
     @visitors = Analitic.all
   end
