@@ -1,16 +1,17 @@
-import { Controller } from "stimulus"
+import { Controller } from "@hotwired/stimulus"
 
+// Connects to data-controller="clipboard"
 export default class extends Controller {
-  static targets = [ "source", "copied" ]
-
-  copy(){
-    this.sourceTarget.select()
-    document.execCommand("copy")
-    this.copiedTarget.textContent = 'Copied!'
+  static targets = ["input"]
+  
+  copy() {
+    const element = this.inputTarget.value
+    navigator.clipboard.writeText(element)
   }
 
-  open(){
-    let content = this.sourceTarget.value
+  open() {
+    let content = this.inputTarget.value
     window.open(content, '_blank');
   }
+  
 }

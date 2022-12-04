@@ -7,6 +7,23 @@
       </p>
 
       <p class="description">Please copy paste the short url in a separate browser</p>
+
+      <div data-controller ="clipboard">
+        <input type="text" value="<%= @url.short_url %>" data-clipboard-target ="input">
+        <button data-action="click->clipboard#copy">Copy</button>
+        <button data-action="click->clipboard#open">open</button>
+      </div>
+
+
+      <%
+=begin%>
+ <div class="form-inline copy-url-container w-auto" data-controller="clipboard">
+        <%= text_field_tag :short_url, @url.short_url, data: {clipboard_target: "source"}, class: 'form-control copy-url-field', disabled: false %>
+        <%= button_tag 'Copy', data: {action: "clipboard#copy", clipboard_target: "copied"}, class: 'btn btn-primary copy-url-button mx-3', type: 'button' %>
+        <%= button_tag 'Open', data: {action: "clipboard#open"}, class: 'btn btn-outline-secondary visit-url-button', type: 'button' %>
+      </div> 
+<%
+=end%>
       
 
       <button class="btn" type="sbmit"><%= link_to 'Home', root_path, class: "link" %></button>
